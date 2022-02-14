@@ -1,1 +1,1 @@
-# mgtu_6_sem
+# mgtu\_6\_sem
