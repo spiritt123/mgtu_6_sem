@@ -1,0 +1,36 @@
+.MICRO "ATmega8515"
+.PROGRAM "laba1.asm"
+.TARGET "laba1.hex"
+.TRACE
+ ; Activate micro trace
+; Following lines are optional; if not included
+; exactly these values are taken by default
+; ------------------------------------------------------------
+.POWER VDD=5 VSS=0 ; Power nodes
+.CLOCK 4meg
+ ; Micro clock
+.STORE 3000m
+ ; Trace (micro+signals) storage time
+; Micro nodes: RESET, PA0-PA7, PB0-PB7, PC0-PC7, PD0-PD7, PE0-PE2,
+ACO, TIM1OVF
+; Define here the hardware around the micro
+; ------------------------------------------------------------
+d1 vdd a1
+R1 a1 pb0 560
+d2 vdd a2
+R2 a2 pb1 560
+d3 vdd a3
+R3 a3 pb2 560
+d4 vdd a4
+R4 a4 pb3 560
+d5 vdd a5
+R5 a5 pb4 560
+d6 vdd a6
+R6 a6 pb5 560
+d7 vdd a7
+R7 a7 pb6 560
+d8 vdd a8
+R8 a8 pb7 560
+k0 pd0 gnd monostable (10m)
+k1 pd1 gnd monostable (10m)
+.PLOT v(pb0) v(pb1) v(pb2) v(pb3) v(pb4) v(pb5) v(pb6) v(pb7)
