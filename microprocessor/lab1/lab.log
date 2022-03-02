@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.2.17)  28 FEB 2022 09:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.2.17)  2 MAR 2022 13:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1748,92 +1748,96 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 )
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-koi8-r.def
 File: se-koi8-r.def 2019/11/29 v1.12 stringenc: KOI8-R
-) [2
+)
+Overfull \hbox (25.50276pt too wide) in paragraph at lines 5--6
+[][][][]  
+ []
+
+[2
 
 ]
-[3] [4]
+<inc/img/demo1starttime.png, id=64, 170.13562pt x 15.80907pt>
+File: inc/img/demo1starttime.png Graphic file (type png)
+<use inc/img/demo1starttime.png>
+Package pdftex.def Info: inc/img/demo1starttime.png  used on input line 63.
+(pdftex.def)             Requested size: 250.24199pt x 23.25372pt.
+<inc/img/demo1endtime.png, id=65, 162.6075pt x 18.0675pt>
+File: inc/img/demo1endtime.png Graphic file (type png)
+<use inc/img/demo1endtime.png>
+Package pdftex.def Info: inc/img/demo1endtime.png  used on input line 70.
+(pdftex.def)             Requested size: 250.24199pt x 27.80692pt.
+ [3 <./inc/img/demo1starttime.png (PNG copy)>]
+<inc/img/demo1schemeofalgorithm.png, id=105, 362.85562pt x 505.89pt>
+File: inc/img/demo1schemeofalgorithm.png Graphic file (type png)
+<use inc/img/demo1schemeofalgorithm.png>
+Package pdftex.def Info: inc/img/demo1schemeofalgorithm.png  used on input line
+ 79.
+(pdftex.def)             Requested size: 250.24199pt x 348.89464pt.
+ [4 <./inc/img/demo1endtime.png (PNG copy)> <./inc/img/demo1schemeofalgorithm.p
+ng (PNG copy)>]
+<inc/img/demo1scheme.png, id=111, 612.78937pt x 331.2375pt>
+File: inc/img/demo1scheme.png Graphic file (type png)
+<use inc/img/demo1scheme.png>
+Package pdftex.def Info: inc/img/demo1scheme.png  used on input line 94.
+(pdftex.def)             Requested size: 350.33727pt x 189.3734pt.
+<inc/img/demo1schemeofanalize.png, id=112, 384.6872pt x 214.55156pt>
+File: inc/img/demo1schemeofanalize.png Graphic file (type png)
+<use inc/img/demo1schemeofanalize.png>
+Package pdftex.def Info: inc/img/demo1schemeofanalize.png  used on input line 1
+01.
+(pdftex.def)             Requested size: 350.33727pt x 195.4059pt.
+ [5 <./inc/img/demo1scheme.png (PNG copy)> <./inc/img/demo1schemeofanalize.png 
+(PNG copy)>]
+Package csquotes Info: Input encoding change on input line 117.
 
-! LaTeX Error: File `inc/img/demo1timestart' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.61     {Время до начала цикла}
-                                                   % Подпись рису...
-
-? 
-
-! LaTeX Error: File `inc/img/demo1timeend' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.68 ...емя после работы цикла}
-                                                   % Подпись рису...
-
-? 
-
-! LaTeX Error: File `inc/img/demo1schemeofalgorithms' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77     {Схема алгоритма}
-                                         % Подпись рисунка
-? 
-Package csquotes Info: Input encoding change on input line 86.
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2014/10/28 v1.0d Input encoding file
-) [5]
+) [6]
+<inc/img/lab1starttime.png, id=157, 170.13562pt x 15.80907pt>
+File: inc/img/lab1starttime.png Graphic file (type png)
+<use inc/img/lab1starttime.png>
+Package pdftex.def Info: inc/img/lab1starttime.png  used on input line 125.
+(pdftex.def)             Requested size: 250.24199pt x 23.25372pt.
 
-! LaTeX Error: File `inc/img/lab1timestart' not found.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.94     {Время до начала цикла}
-                                                   % Подпись рису...
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-? 
+<inc/img/lab1endtime.png, id=158, 159.59625pt x 25.59563pt>
+File: inc/img/lab1endtime.png Graphic file (type png)
+<use inc/img/lab1endtime.png>
+Package pdftex.def Info: inc/img/lab1endtime.png  used on input line 132.
+(pdftex.def)             Requested size: 300.29344pt x 48.16077pt.
 
-! LaTeX Error: File `inc/img/lab1timeend' not found.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.101 ...�мя после работы цикла}
-                                                   % Подпись рису...
+<inc/img/lab1scheme.png, id=160, 795.72281pt x 496.10344pt>
+File: inc/img/lab1scheme.png Graphic file (type png)
+<use inc/img/lab1scheme.png>
+Package pdftex.def Info: inc/img/lab1scheme.png  used on input line 140.
+(pdftex.def)             Requested size: 300.29344pt x 187.21924pt.
+[7]
+<inc/img/lab1digitalanalize.png, id=204, 396.7322pt x 213.79875pt>
+File: inc/img/lab1digitalanalize.png Graphic file (type png)
+<use inc/img/lab1digitalanalize.png>
+Package pdftex.def Info: inc/img/lab1digitalanalize.png  used on input line 148
+.
+(pdftex.def)             Requested size: 300.29344pt x 161.83301pt.
+ [8 <./inc/img/lab1starttime.png (PNG copy)> <./inc/img/lab1endtime.png (PNG co
+py)> <./inc/img/lab1scheme.png (PNG copy)> <./inc/img/lab1digitalanalize.png (P
+NG copy)>]
+<inc/img/lab1schemeofalgorithm.png, id=212, 362.85562pt x 505.89pt>
+File: inc/img/lab1schemeofalgorithm.png Graphic file (type png)
+<use inc/img/lab1schemeofalgorithm.png>
+Package pdftex.def Info: inc/img/lab1schemeofalgorithm.png  used on input line 
+158.
+(pdftex.def)             Requested size: 300.29344pt x 418.67665pt.
+ [9 <./inc/img/lab1schemeofalgorithm.png (PNG copy)>]
 
-? 
-
-! LaTeX Error: File `inc/img/lab1schemeofalgorithms' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110     {Схема алгоритма}
-                                          % Подпись рисунка
-? 
-[6]
-Package csquotes Info: Input encoding change on input line 125.
- (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
-File: koi8-r.def 2014/10/28 v1.0d Input encoding file
-) [7] [8]
-[9] 
 AED: lastpage setting LastPage
 (./lab.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `lab.out' has not changed.
 (rerunfilecheck)             Checksum: 83D01EEED92CCA04F5EB9BD17F647449;735.
@@ -1842,11 +1846,11 @@ Package logreq Info: Writing requests to 'lab.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47996 strings out of 479304
- 1020921 string characters out of 5869779
- 2159170 words of memory out of 5000000
+ 47890 strings out of 479304
+ 1019375 string characters out of 5869779
+ 2195620 words of memory out of 5000000
  64068 multiletter control sequences out of 15000+600000
- 418148 words of font info for 85 fonts, out of 8000000 for 9000
+ 418294 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,19n,130p,1148b,3053s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texmf
@@ -1856,10 +1860,10 @@ b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfti1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb
 >
-Output written on lab.pdf (9 pages, 314881 bytes).
+Output written on lab.pdf (9 pages, 477984 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
- 360 compressed objects within 4 object streams
- 241 named destinations out of 1000 (max. 500000)
- 25138 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 275 PDF objects out of 1000 (max. 8388607)
+ 243 compressed objects within 3 object streams
+ 142 named destinations out of 1000 (max. 500000)
+ 25188 words of extra memory for PDF output out of 29859 (max. 10000000)
 
