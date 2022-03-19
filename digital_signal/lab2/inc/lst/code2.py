@@ -31,8 +31,8 @@ xd = np.linspace(tmin, tmax, N)
 zd = A * tripuls(xd, 0.1, 1)
 plt.figure()
 plt.subplot(211)
-#plt.plot(xd, zd, 'k')
-#plt.show()
+plt.plot(xd, zd, 'k')
+plt.show()
 
 
 def pulstran(t, count, tau, tau_count):
@@ -44,23 +44,23 @@ def pulstran(t, count, tau, tau_count):
 zd = A * pulstran(xd, 4, 0.1, 0.3)
 plt.figure()
 plt.subplot(211)
-#plt.plot(xd, zd, 'k')
-#plt.show()
+plt.plot(xd, zd, 'k')
+plt.show()
 
 w = chirp(xd[::-1], fmax, fmin, tmax, method='linear')
 plt.figure()
 plt.subplot(111)
 plt.xlim([0, 4])
-#plt.plot(xd, -w)
-#plt.show()
+plt.plot(xd, -w)
+plt.show()
 
 zd = A0+A*np.sin(2*np.pi*f0*xd)
 
 plt.figure()
 plt.subplot(111)
 plt.xlim([0, 4])
-#plt.plot(xd, zd)
-#plt.show()
+plt.plot(xd, zd)
+plt.show()
 
 Et = 1/fd * np.sum(zd**2);
 Pt = Et/dt;
@@ -70,34 +70,38 @@ X = fft(zd,N);
 Ew = 1/(fd*N) * np.sum(abs(X)**2);
 print(Ew)
 print(Pt)
-    
-zd = A0+A*np.sin(2*np.pi*f0*xd)
-af = abs(fft(zd)/N); 
 
-plt.figure() 
+zd = A0+A*np.sin(2*np.pi*f0*xd)
+af = abs(fft(zd)/N);
+
+plt.figure()
 plt.xlim([-50, 50])
-#plt.plot(xd, fftshift(af)) 
-#plt.show()
+plt.plot(xd, fftshift(af))
+plt.show()
 
 #f=np.linspace(0, fd/N, fd / (fd-fd/N))
 ef = 1/(N*fd) * (np.abs(fft(zd))**2)
-#plt.plot(xd, fftshift(ef)) 
-#plt.show()
+plt.plot(xd, fftshift(ef))
+plt.show()
 
-pf = ef / dt 
-#plt.plot(xd, fftshift(pf)) 
-#plt.show()
+pf = ef / dt
+plt.plot(xd, fftshift(pf))
+plt.show()
+
+
+f, Pxx_den = periodogram(xd, fd ** (0.5), scaling='spectrum')
+plt.ylim([10 ** (-6), 100])
+plt.xlim([0, 10])
+plt.semilogy(f, Pxx_den)
+plt.show()
+
 
 f, Pxx_den = periodogram(xd, fd, scaling='density')
-
-#plt.ylim([10**(-10), 0])
+plt.ylim([10 ** (-6), 100])
+plt.xlim([0, 10])
 plt.semilogy(f, Pxx_den)
 plt.show()
 
 
-f, Pxx_den = periodogram(xd, fd, scaling='spectrum')
-#plt.ylim([10**(-10), 0])
-plt.semilogy(f, Pxx_den)
-plt.show()
 
 

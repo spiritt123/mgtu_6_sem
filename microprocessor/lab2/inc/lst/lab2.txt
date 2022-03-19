@@ -1,0 +1,98 @@
+;??????????: SW0-PD0, SW2-PD2, LED-PB
+;*********************************************************************
+;.include "8515def.inc" 
+.include "m8515def.inc" 
+.def temp = r16 
+.def reg_led = r20 
+.def key = r21
+.equ START = 0 
+.org $000
+
+rjmp INIT 
+.org $002
+rjmp START_PRESSED ;????????? ???????? ?????????? INT1(START)
+.org $00D
+rjmp STOP_PRESSED ; ????????? ???????? ?????????? INT2(STOP)
+
+
+INIT:  
+	ldi temp,$5F
+	out SPL,temp 
+	ldi temp,$02 
+	out SPH,temp 
+	
+	ldi reg_led,0x3F
+	sec ;C=1
+	clt ;T=0
+	clr key
+
+	ser temp 
+	out DDRB,temp 
+	out PORTB,temp 
+	clr temp 
+	out DDRD,temp 
+	ldi temp,0x08
+	out PORTD, temp
+	clr temp
+	out DDRE,temp 
+	ldi temp,0x1
+	out PORTE,temp
+	ldi temp,(1<<INT2)| (1<<INT1) 
+	out GICR,temp 
+	ldi temp,0x00 
+	out MCUCR,temp 
+	out MCUCSR,temp
+	sei 
+WAIT:
+	sbrs key,0
+	rjmp WAIT 
+	out PORTB,reg_led 
+	rcall DELAY  
+
+	brts LEFT 
+
+;sbrs reg_led,1
+	mov r27, reg_led
+	andi r27, 0x01
+	brne R_OFFSET
+	set
+	ldi reg_led,0x03
+	clc
+	rjmp WAIT
+	;end if
+
+R_OFFSET:
+	ror reg_led 
+	rjmp WAIT
+
+LEFT: 
+	;sbrc reg_led,6 
+	mov r27, reg_led
+	andi r27, 0x3F
+	brne L_OFFSET
+	clt
+	ldi reg_led,0x3F
+	sec
+	rjmp WAIT
+	;end if
+L_OFFSET:
+	rol reg_led 
+	rjmp WAIT
+
+STOP_PRESSED:
+	ldi key,0
+	reti
+START_PRESSED:
+	ldi key,1
+	reti
+
+DELAY: ldi r17,11
+d1: ldi r18,255
+d2: ldi r19,236
+d3: dec r19
+	brne d3
+	dec r18
+	brne d2
+	dec r17
+	brne d1
+	ret
