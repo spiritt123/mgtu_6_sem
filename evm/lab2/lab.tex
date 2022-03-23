@@ -1,0 +1,214 @@
+\documentclass{bmstu}
+\usepackage{xparse}
+\usepackage{diagbox}
+\usepackage{karnaugh-map}
+\begin{document}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\makereporttitle
+    {Информатика и системы управления} % Название факультета
+    {Компьютерные системы и сети} % Название кафедры
+    {09.03.01 ПРИКЛАДНАЯ ИНФОРМАТИКА} % направение
+    {лабораторной работе №~2} % Название работы (в дат. падеже)
+    {Проектирование цифровых устройств на основе ПЛИС} % Тема работы
+    {Основы проектирования устройств ЭВМ} % Название курса (необязательный аргумент)
+    {19} % Номер варианта (необязательный аргумент)
+    {ИУ6-62Б} % Номер группы
+    {
+    	{ИУ6-62Б}
+    	{А.Е.Медведев} % ФИО студента
+    	{С.В. Ибрагимов} % ФИО преподавателя
+    } 
+
+\section*{Цель работы}
+Закрепление на практике теоретических сведений, полученных при
+изучении методики проектирования цифровых устройств на основе программируемых
+логических интегральных схем (ПЛИС), получение необходимых навыков работы с системой
+автоматизированного проектирования ISE WebPack устройств на основе ПЛИС фирмы
+Xilinx, изучение аппаратных и программных средств моделирования, макетирования и
+отладки устройств на основе ПЛИС.
+
+\section*{Данные по варианту}
+
+\begin{table}[ht]
+	\begin{center}
+	\caption{Таблица данных по вариантов}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Набор   & State0 & State1 & State2 & State3\\
+		\hline
+		XC3S200 & 11     & 00     & 01     & 10\\
+		\hline
+	\end{tabular}
+	\end{center}
+\end{table}
+
+\section*{Задание 1. }
+
+\begin{table}[ht]
+	\begin{center}
+	\caption{Таблица выходов}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Состояние & State0 & State1 & State2 & State3\\
+		\hline
+		Двоичный код состояния & 11     & 00     & 01     & 10\\
+		\hline
+		CNT        & 0      & 1      & 1      & 0\\
+		\hline
+		DLY\_EN    & 0      & 1      & 0      & 1 \\
+		\hline
+	\end{tabular}
+	\end{center}
+\end{table}
+
+Найдём функции для сигналов CNT и DLY\_EN. \\
+
+$	\text{CNT} = \overline{S(1)}\\
+	\text{DLY\_EN} = \overline{S(0)}
+$
+
+
+\begin{table}[ht]
+	\begin{center}
+	\caption{Сигналы SN(*) и D*}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|l|}
+		\hline
+		   \scriptsize{COUNT} & 
+		   \scriptsize{DLY\_OVF} & S1(t) & S0(t) & S1(t+1) & S0(t+1) & SN(1) & SN(0) & \scriptsize{Описание события} \\
+		\hline
+		0     & x        & 1     & 1     & 1       & 1       & 1     & 1     &  \scriptsize{Ожидание нажатия кнопки}\\
+		\hline
+		1     & x        & 1     & 1     & 0       & 0       & 0     & 0     &  \scriptsize{Нажатие кнопки}\\
+		\hline
+		x     & 0        & 0     & 0     & 0       & 0       & 0     & 0     &  \scriptsize{Ожидание окончания счета}\\
+		\hline
+		x     & 1        & 0     & 0     & 0       & 1       & 0     & 1     &  \scriptsize{Конец счета}\\
+		\hline
+		1     & x        & 0     & 1     & 0       & 1       & 0     & 1     &  \scriptsize{Ожидание отпускания}\\
+		\hline
+		0     & x        & 0     & 1     & 1       & 0       & 1     & 0     &  \scriptsize{Отпускание кнопки}\\
+		\hline
+		x     & 0        & 1     & 0     & 1       & 0       & 1     & 0     &  \scriptsize{Ожидание окончания счета}\\
+		\hline
+		x     & 1        & 1     & 0     & 1       & 1       & 1     & 1     &  \scriptsize{Конец счета}\\
+		\hline
+	\end{tabular}
+	\end{center}
+\end{table}
+
+Найдём минимальные булевые функции для сигнала SN через карты карно.
+
+\begin{table}[ht]
+\begin{center}
+	\caption{Карты карно для SN(1) и SN(0)}
+	
+	\begin{karnaugh-map}[4][4][1][COUNT / DLY\_OVF][S(1) / S(0)]
+        \manualterms{0,0,0,0,
+        			 1,1,0,0,
+        			 1,1,1,1,
+        			 1,1,0,0}
+        \implicant{4}{13}
+        \implicant{8}{10}
+	\end{karnaugh-map}
+	\quad
+	\begin{karnaugh-map}[4][4][1][COUNT / DLY\_OVF][S(1) / S(0)]
+        \manualterms{0,1,0,1,
+        			 0,0,1,1,
+        			 0,1,0,1,
+        			 1,1,0,0}
+        \implicant{7}{6}
+        \implicant{12}{13}
+        \implicantedge{1}{3}{9}{11}
+	\end{karnaugh-map}
+\end{center}
+\end{table}
+\newpage
+Тогда $\text{SN(1)} = \overline{\text{COUNT}} ~ \text{S(0)} \vee \text{S(1) S(0)} $,  \\
+а  $\text{SN(0)} = \text{DLY\_OVF S(1)} \vee \text{COUNT $\overline{S(1)}$ S(0)} \vee \overline{\text{COUNT}}~ \text{S(1) S(0)}$. 
+
+\newpage
+\section*{Задание 2. }
+Разработайте текстовое описание модуля в соответствии с полученными
+функциями DLY\_EN, CNT, SN(0), SN(1)\\
+Код программы приведен в листинге \ref{lst:lab2_2.txt}
+
+\includelisting
+	{lab2_2.txt}
+	{Код на VHDL}
+
+
+\section*{Вывод}
+В ходе выполнения лабораторной работы была српоктирована плис в среде Xilinux.
+
+\end{document}
+\begin{comment}
+На~рисунке~\ref{img:tux} символ семейства Unix-подобных операционных систем Linux.
+Он отличается от~<<обычных>> пингвинов желтым цветом клюва и~лап.
+
+\includeimage
+    {tux} % Имя файла без расширения (файл должен быть расположен в директории inc/img/)
+    {f} % Обтекание (без обтекания)
+    {h} % Положение рисунка (см. figure из пакета float)
+    {0.25\textwidth} % Ширина рисунка
+    {Символ Linux (Tux)} % Подпись рисунка
+
+На~листингах представлен исходный код программы Hello World на~языке программирования C в~двух вариантах оформления.
+
+\includelisting
+    {main.c} % Имя файла с расширением (файл должен быть расположен в директории inc/lst/)
+    {Исходный код программы Hello World} % Подпись листинга
+
+\includelistingpretty
+    {main.c} % Имя файла с расширением (файл должен быть расположен в директории inc/lst/)
+    {c} % Язык программирования (необязательный аргумент)
+    {Исходный код программы Hello World} % Подпись листинга
+
+
+        %\implicant{0}{2}
+        %\implicant{5}{15}
+        %\implicantedge{1}{3}{9}{11}
+        %\implicantcorner
+        %\implicantedge{4}{12}{6}{14}
+
+
+\begin{center}
+\begin{table}[ht]
+	\caption{Карты карно для SN}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multicolumn{5}{| c |}{\textbf{SN(1)}} \\
+		\hline
+		\backslashbox[140px]{\scriptsize{S(1) S(0)}}{\scriptsize{COUNT DLY\_EN}} & 00 & 01 & 11 & 10\\
+		\hline
+		00 & 0 & 0 & 0 & 0\\
+		\hline
+		01 & 1 & 1 & 0 & 0\\
+		\hline
+		11 & 1 & 1 & 0 & 0\\
+		\hline
+		10 & 1 & 1 & 1 & 1\\
+		\hline
+	\end{tabular}
+	\quad
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multicolumn{5}{| c |}{\textbf{SN(0)}} \\
+		\hline
+		\backslashbox[140px]{\scriptsize{S(1) S(0)}}{\scriptsize{COUNT DLY\_EN}} & 00 & 01 & 11 & 10\\
+		\hline
+		00 & 0 & 1 & 1 & 0\\
+		\hline
+		01 & 0 & 0 & 1 & 1\\
+		\hline
+		11 & 1 & 1 & 0 & 0\\
+		\hline
+		10 & 0 & 1 & 1 & 0\\
+		\hline
+	\end{tabular}
+\end{table}
+\end{center}
+
+
+\end{comment}
