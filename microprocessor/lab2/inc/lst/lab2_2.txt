@@ -1,18 +1,12 @@
-;??????????: SW0-PD0, SW2-PD2, LED-PB
-;*********************************************************************
-;.include "8515def.inc" 
-.include "m8515def.inc" 
-.def temp = r16 
-.def reg_led = r20 
-.def key = r21
-.equ START = 0 
-.org $000
-
+    .include "m8515def.inc" 
+    .def temp = r16 
+    .def reg_led = r20 
+    .def key = r21
+    .equ START = 0 
+    .org $000
 rjmp INIT 
-.org $00D
+    .org $00D
 rjmp E0_PRESSED ; ????????? ???????? ?????????? INT2()
-
-
 INIT:  
 	ldi temp,$5F
 	out SPL,temp 
@@ -46,10 +40,8 @@ WAIT:
 	rjmp WAIT 
 	out PORTB,reg_led 
 	rcall DELAY  
-
 	brts LEFT 
 
-;sbrs reg_led,1
 	mov r27, reg_led
 	andi r27, 0x01
 	brne R_OFFSET
@@ -57,14 +49,10 @@ WAIT:
 	ldi reg_led,0x03
 	clc
 	rjmp WAIT
-	;end if
-
 R_OFFSET:
 	ror reg_led 
 	rjmp WAIT
-
 LEFT: 
-	;sbrc reg_led,6 
 	mov r27, reg_led
 	andi r27, 0x3F
 	brne L_OFFSET
@@ -72,18 +60,15 @@ LEFT:
 	ldi reg_led,0x3F
 	sec
 	rjmp WAIT
-	;end if
 L_OFFSET:
 	rol reg_led 
 	rjmp WAIT
-
 E0_PRESSED:
 	sbis PINA, 0
 	ldi key,0
 	sbis PINA, 1
 	ldi key,1
 	reti
-
 DELAY: ldi r17,11
 d1: ldi r18,255
 d2: ldi r19,236

@@ -6,7 +6,6 @@
 
 .org $000
 	rjmp init
-;MaltsevIgorIu6-61
 init:
 
 	ser temp					 
@@ -15,29 +14,29 @@ init:
 	clr temp				
 	out DDRD,temp			
 	ldi temp,0xFF	
-	out PORTD,temp				
+	out PORTD,temp
+	ldi leds, 0xFF			
 	
 loop:
 	sbis PIND, 0
-	ldi leds, 0x1F
-	sbis PIND, 1
-	ldi leds, 0x3F
-	sbis PIND, 2
-	ldi leds, 0x5F
-	sbis PIND, 3
-	ldi leds, 0x7F
-	sbis PIND, 4
-	ldi leds, 0x9F
-	sbis PIND, 5
-	ldi leds, 0xBF
-	sbis PIND, 6
-	ldi leds, 0xDF
-	sbis PIND, 7
 	ldi leds, 0xFF
+	sbis PIND, 1
+	ldi leds, 0xEF
+	sbis PIND, 2
+	ldi leds, 0xDF
+	sbis PIND, 3
+	ldi leds, 0xCF
+	sbis PIND, 4
+	ldi leds, 0xBF
+	sbis PIND, 5
+	ldi leds, 0xAF
+	sbis PIND, 6
+	ldi leds, 0x9F
+	sbis PIND, 7
+	ldi leds, 0x8F
 	out PORTB, leds
 
-	ldi r18, 20
-m0:	ldi r19,200
+ 	ldi r19,20
 m1: ldi r20,255
 m2: ldi r21,255
 m3: dec r21 
@@ -46,10 +45,13 @@ m3: dec r21
 	brne m2 
 	dec r19 
 	brne m1 
-	dec r18
-	brne m0
-	
+
+	ldi leds, 0xFF
+
 	rjmp loop
-; t=4? ???????=1???     ????? ?????? ?????: 1/1000000= 1????=> ????? ???????? => 4000000 ???? => 400 00 00 ?????
-; 3+n(n(l(m(1+2)+1+2)+1+2)) =~ 4???
+; t=4s
+; F=1MHz     
+; time to ticks = : 1/1000000= 1us => 4 000 000 ticks
+; n(l(m(1+2)+1+2)+1+2) =~ 4ñåê
+
 
