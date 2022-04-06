@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.4)  18 MAR 2022 18:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.4)  6 APR 2022 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab.tex 62_ЛР2_Медведев
+**lab.tex
 (./lab.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-01-09> xparse <2020-03-03> (./bmstu.cls
@@ -1522,34 +1522,30 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'russian'.
- (./lab.aux
-
-LaTeX Warning: Label `lst:demo1.asm' multiply defined.
-
-)
+ (./lab.aux)
 \openout1 = `lab.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Info: Redefining \th on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Info: Redefining \th on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1585,14 +1581,14 @@ LaTeX Info: Redefining \th on input line 13.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 13.
+LaTeX Info: Redefining \microtypecontext on input line 15.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 13.
+LaTeX Info: Redefining \showhyphens on input line 15.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1681,9 +1677,9 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'lab.bbl' not found.
 
 No file lab.bbl.
-Package biblatex Info: Reference section=0 on input line 13.
-Package biblatex Info: Reference segment=0 on input line 13.
-Package hyperref Info: Link coloring OFF on input line 13.
+Package biblatex Info: Reference section=0 on input line 15.
+Package biblatex Info: Reference segment=0 on input line 15.
+Package hyperref Info: Link coloring OFF on input line 15.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -1695,9 +1691,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count515
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 (./lab.out) (./lab.out)
 \@outlinefile=\write5
@@ -1705,18 +1701,18 @@ LaTeX Info: Redefining \nameref on input line 13.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 13.
+(lastpage)             ! on input line 15.
 <inc/img/bmstu-logo.pdf, id=35, 500.95255pt x 591.38255pt>
 File: inc/img/bmstu-logo.pdf Graphic file (type pdf)
 <use inc/img/bmstu-logo.pdf>
-Package pdftex.def Info: inc/img/bmstu-logo.pdf  used on input line 28.
+Package pdftex.def Info: inc/img/bmstu-logo.pdf  used on input line 30.
 (pdftex.def)             Requested size: 62.35997pt x 73.61583pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-Underfull \hbox (badness 10000) in alignment at lines 28--28
+Underfull \hbox (badness 10000) in alignment at lines 30--30
 [][][] 
  []
 
@@ -1727,15 +1723,15 @@ Underfull \hbox (badness 10000) in alignment at lines 28--28
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
 
 LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 30.
+(Font)              size <17.28> substituted on input line 32.
 
 
 LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 30.
+(Font)              size <17.28> substituted on input line 32.
 
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
 LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-43.
+45.
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
@@ -1743,7 +1739,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T2A).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package csquotes Info: Input encoding change on input line 43.
+Package csquotes Info: Input encoding change on input line 45.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2014/10/28 v1.0d Input encoding file
@@ -1754,29 +1750,47 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-koi8-r.def
 File: se-koi8-r.def 2019/11/29 v1.12 stringenc: KOI8-R
 ) [2]
-<inc/img/demo2_1.png, id=79, 349.305pt x 262.73157pt>
-File: inc/img/demo2_1.png Graphic file (type png)
-<use inc/img/demo2_1.png>
-Package pdftex.def Info: inc/img/demo2_1.png  used on input line 51.
-(pdftex.def)             Requested size: 500.484pt x 376.46497pt.
+<inc/img/demo1_dis.png, id=80, 490.08093pt x 126.4725pt>
+File: inc/img/demo1_dis.png Graphic file (type png)
+<use inc/img/demo1_dis.png>
+Package pdftex.def Info: inc/img/demo1_dis.png  used on input line 54.
+(pdftex.def)             Requested size: 500.484pt x 129.1604pt.
 
 [3]
-Package csquotes Info: Input encoding change on input line 59.
- (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
+<inc/img/demo2_1.png, id=113, 349.305pt x 262.73157pt>
+File: inc/img/demo2_1.png Graphic file (type png)
+<use inc/img/demo2_1.png>
+Package pdftex.def Info: inc/img/demo2_1.png  used on input line 61.
+(pdftex.def)             Requested size: 500.484pt x 376.46497pt.
+ [4 <./inc/img/demo1_dis.png (PNG copy)> <./inc/img/demo2_1.png (PNG copy)>]
+Package csquotes Info: Input encoding change on input line 70.
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2014/10/28 v1.0d Input encoding file
-) [4 <./inc/img/demo2_1.png (PNG copy)>] [5]
-<inc/img/demo2_2.png, id=167, 341.02406pt x 64.74188pt>
+) [5]
+<inc/img/demo2_2.png, id=161, 341.02406pt x 64.74188pt>
 File: inc/img/demo2_2.png Graphic file (type png)
 <use inc/img/demo2_2.png>
-Package pdftex.def Info: inc/img/demo2_2.png  used on input line 67.
+Package pdftex.def Info: inc/img/demo2_2.png  used on input line 79.
 (pdftex.def)             Requested size: 500.484pt x 95.02023pt.
-<inc/img/demo2_2_r.png, id=168, 266.49562pt x 407.27156pt>
+<inc/img/demo2_2_dis.png, id=162, 445.665pt x 354.57469pt>
+File: inc/img/demo2_2_dis.png Graphic file (type png)
+<use inc/img/demo2_2_dis.png>
+Package pdftex.def Info: inc/img/demo2_2_dis.png  used on input line 87.
+(pdftex.def)             Requested size: 500.484pt x 398.1922pt.
+ [6 <./inc/img/demo2_2.png (PNG copy)>]
+<inc/img/demo2_2_r.png, id=189, 266.49562pt x 407.27156pt>
 File: inc/img/demo2_2_r.png Graphic file (type png)
 <use inc/img/demo2_2_r.png>
-Package pdftex.def Info: inc/img/demo2_2_r.png  used on input line 74.
+Package pdftex.def Info: inc/img/demo2_2_r.png  used on input line 95.
 (pdftex.def)             Requested size: 250.24199pt x 382.4438pt.
- [6 <./inc/img/demo2_2.png (PNG copy)> <./inc/img/demo2_2_r.png (PNG copy)>]
-Package csquotes Info: Input encoding change on input line 81.
+ [7 <./inc/img/demo2_2_dis.png (PNG copy)>]
+<inc/img/demo2_2_pr.png, id=196, 642.90187pt x 430.60875pt>
+File: inc/img/demo2_2_pr.png Graphic file (type png)
+<use inc/img/demo2_2_pr.png>
+Package pdftex.def Info: inc/img/demo2_2_pr.png  used on input line 103.
+(pdftex.def)             Requested size: 250.24199pt x 167.6082pt.
+ [8 <./inc/img/demo2_2_r.png (PNG copy)> <./inc/img/demo2_2_pr.png (PNG copy)>]
+Package csquotes Info: Input encoding change on input line 112.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2014/10/28 v1.0d Input encoding file
@@ -1785,29 +1799,39 @@ Overfull \hbox (18.0945pt too wide) in paragraph at lines 2--3
 [][][][]  
  []
 
-[7] [8]
-<inc/img/lab2.png, id=261, 1445.4pt x 680.5425pt>
+[9] [10] [11]
+<inc/img/lab2.png, id=315, 1445.4pt x 680.5425pt>
 File: inc/img/lab2.png Graphic file (type png)
 <use inc/img/lab2.png>
-Package pdftex.def Info: inc/img/lab2.png  used on input line 90.
+Package pdftex.def Info: inc/img/lab2.png  used on input line 121.
 (pdftex.def)             Requested size: 500.484pt x 235.63892pt.
- [9] [10 <./inc/img/lab2.png (PNG copy)>]
-<inc/img/lab2_pr.png, id=297, 614.295pt x 417.05812pt>
+<inc/img/lab2_pr.png, id=316, 614.295pt x 417.05812pt>
 File: inc/img/lab2_pr.png Graphic file (type png)
 <use inc/img/lab2_pr.png>
-Package pdftex.def Info: inc/img/lab2_pr.png  used on input line 101.
+Package pdftex.def Info: inc/img/lab2_pr.png  used on input line 129.
 (pdftex.def)             Requested size: 500.484pt x 339.79436pt.
+ [12 <./inc/img/lab2.png (PNG copy)>] [13 <./inc/img/lab2_pr.png (PNG copy)>]
+Package csquotes Info: Input encoding change on input line 138.
+ (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2014/10/28 v1.0d Input encoding file
+)
+[14] [15]
+<inc/img/lab2_2_pr.png, id=406, 694.84593pt x 411.78844pt>
+File: inc/img/lab2_2_pr.png Graphic file (type png)
+<use inc/img/lab2_2_pr.png>
+Package pdftex.def Info: inc/img/lab2_2_pr.png  used on input line 145.
+(pdftex.def)             Requested size: 375.36299pt x 222.4504pt.
 
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
 
 AED: lastpage setting LastPage
-[11 <./inc/img/lab2_pr.png (PNG copy)>] (./lab.aux)
+[16 <./inc/img/lab2_2_pr.png (PNG copy)>] (./lab.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `lab.out' has not changed.
 (rerunfilecheck)             Checksum: B8E84EB8B26F8518A68CA0964086510E;820.
@@ -1816,13 +1840,13 @@ Package logreq Info: Writing requests to 'lab.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47867 strings out of 479304
- 1017580 string characters out of 5869780
- 2190430 words of memory out of 5000000
- 63970 multiletter control sequences out of 15000+600000
- 418294 words of font info for 87 fonts, out of 8000000 for 9000
+ 48012 strings out of 479304
+ 1020049 string characters out of 5869780
+ 2231916 words of memory out of 5000000
+ 63999 multiletter control sequences out of 15000+600000
+ 418659 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 132i,19n,130p,1174b,3053s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 132i,19n,130p,1148b,3053s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texmf
 /fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/
 cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pf
@@ -1830,10 +1854,10 @@ b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfti1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb
 >
-Output written on lab.pdf (11 pages, 512108 bytes).
+Output written on lab.pdf (16 pages, 638752 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 349 compressed objects within 4 object streams
- 221 named destinations out of 1000 (max. 500000)
- 25187 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 519 PDF objects out of 1000 (max. 8388607)
+ 479 compressed objects within 5 object streams
+ 319 named destinations out of 1000 (max. 500000)
+ 25207 words of extra memory for PDF output out of 29859 (max. 10000000)
 

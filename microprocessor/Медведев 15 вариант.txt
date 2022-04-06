@@ -15,9 +15,9 @@ init:
 	out DDRD,temp			
 	ldi temp,0xFF	
 	out PORTD,temp
-	ldi leds, 0xFF			
-	
 loop:
+	ldi leds, 0xFF
+
 	sbis PIND, 0
 	ldi leds, 0xFF
 	sbis PIND, 1
@@ -46,12 +46,10 @@ m3: dec r21
 	dec r19 
 	brne m1 
 
-	ldi leds, 0xFF
-
 	rjmp loop
 ; t=4s
 ; F=1MHz     
 ; time to ticks = : 1/1000000= 1us => 4 000 000 ticks
-; n(l(m(1+2)+1+2)+1+2) =~ 4ñåê
+; n(l(m(1+2)+1+2)+1+2) =~ 4sec
 
 
