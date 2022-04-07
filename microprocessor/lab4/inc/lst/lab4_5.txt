@@ -1,0 +1,64 @@
+;*********************************************************************** 	;.include "8515def.inc" ;файл определений AT90S8515 
+.include "m8515def.inc" ;файл определений ATmega8515 
+.def temp = r16 ;временный регистр 
+.def H_byte = r17 ;для хранения старшего байта 
+.def L_byte = r18 ;для хранения младшего байта 
+.equ START = 0 ;0-ой вывод порта PD 
+.equ SHOW_L = 1 ;1-ый вывод порта PD 
+.equ SHOW_H = 2 ;2-ой вывод порта PD 
+;***Векторы прерываний 
+.org $000 
+    rjmp INIT ;обработка сброса 
+.org $003 
+    rjmp CAPT_PRESSED ;обработка внешнего прерывания INT0 – 
+; нажатие CAPT 
+;***Инициализация МК 
+INIT: ldi temp,low(RAMEND) ;установка 
+    out SPL,temp ; указателя стека 
+    ldi temp,high(RAMEND) ; на последнюю 
+    out SPH,temp ; ячейку ОЗУ 
+    clr temp ;инициализация выводов 
+    out DDRD,temp ; порта PD на ввод 
+    ldi temp,0x07 ;включение ‘подтягивающих’ 
+    out PORTD,temp ; резисторов порта PD 
+    clr temp ;/// для ATmega8515 инициализация 
+    out DDRE,temp ;/// PE0 (ICP) на ввод 
+    ldi temp,0x01 ;/// включение ‘подтягивающего’ 
+    out PORTE,temp ;/// резистора порта PЕ0 
+    ser temp ;инициализация выводов 
+    out DDRB,temp ; порта PB на вывод 
+    out PORTB,temp ;выключение светодиодов 
+    cli ;запрещение прерываний 
+    clr temp ;отключение от таймера 
+    out TCCR1A,temp ; выводов портов 
+    clr temp ;таймер 
+    out TCCR1B,temp ; остановлен 
+    ldi temp,0xFF ;запись числа в 
+    out OCR1AH,temp ; регистр сравнения, 
+    ldi temp,0xFF ; первым записывается 
+    out OCR1AL,temp ; старший байт 
+    clr temp ;обнуление 
+    out TCNT1H,temp ; содержимого 
+    out TCNT1L,temp ; счётного регистра 
+    ldi L_byte,0x00 ; обнуление 
+    ldi H_byte,0x00 ; регистров вывода 
+    sei ;глобальное разрешение прерываний 
+WAITSTART: sbic PIND,START ;ожидание нажатия 
+    rjmp WAITSTART ; кнопки START 
+    ldi temp,0x08 ;разрешение прерывания 
+    out TIMSK,temp ; по событию "захват" таймера 
+    ldi temp,0xCD ;запуск таймера с предделителем 1024, 
+    out TCCR1B,temp ; при совпадении с OCR1A - сброс 
+WAIT_L: sbic PIND,SHOW_L ;ожидание нажатия 
+    rjmp WAIT_H ; кнопки SHOW_L - показать младший байт 
+    out PORTB,L_byte ;вывод на СД 
+WAIT_H: sbic PIND,SHOW_H ;ожидание нажатия 
+    rjmp WAIT_L ; кнопки SHOW_H - показать старший байт 
+    out PORTB,H_byte ;вывод на СД 
+    rjmp WAIT_L 
+;***Обработка прерывания от кнопки CAPT 
+CAPT_PRESSED: in L_byte,ICR1L ;считывание младшего байта 
+    in H_byte,ICR1H ;считывание старшего байта 
+    com L_byte ;инвертирование для вывода 
+    com H_byte ;инвертирование для вывода 
+    reti 

@@ -1,0 +1,56 @@
+;.include "8515def.inc" ;файл определений AT90S8515 
+.include "m8515def.inc" ;файл определений ATmega8515 
+.def temp = r16 ;временный регистр 
+.equ START = 0 ;0-ой вывод порта PD 
+.org $000 
+    rjmp INIT ;обработка сброса 
+.org $001 
+    rjmp STOP_PRESSED ;обработка внешнего прерывания INT0 - ; нажатие STOP 
+;***Инициализация МК 
+INIT: ldi temp,low(RAMEND) ;установка 
+    out SPL,temp ; указателя стека 
+    ldi temp,high(RAMEND) ; на последнюю 
+    out SPH,temp ; ячейку ОЗУ 
+    ldi temp,0x20 ;инициализация вывода PD5 
+    out DDRD,temp ; как выхода 
+    ldi temp,0x05 ;включение ‘подтягивающих’ резисторов 
+    out PORTD,temp ; в PD0, PD2 
+    ldi temp,0x04 ;/// для ATmega8515 инициализация вывода порта 
+    out DDRE,temp ;/// PE2 (OC1B) на вывод 
+    ldi temp,(1<<INT0) ;разрешение прерывания INT0
+    out GICR, temp ;в регистре GICR (или GIMSK)
+    clr temp ;обработка прерываний INT0
+    out MCUCR, temp ;по низкому уровню
+;***Настройка функции сравнения таймера Т1 
+    cli ;запрещение прерываний 
+    ldi temp,0x50 ;при сравнении состояния выводов OC1A и 
+    out TCCR1A,temp ; OC1B изменяются на противоположные 
+    clr temp ;останов 
+    out TCCR1B,temp ; таймера 
+    ldi temp,0x2A ;запись числа в 
+    out OCR1BH,temp ; регистр сравнения, 
+    ldi temp,0x3B ; первым записывается 
+    out OCR1BL,temp ; старший байт 
+    ldi temp,0x54 ;запись числа в 
+    out OCR1AH,temp ; регистр сравнения, 
+    ldi temp,0x75 ; первым записывается 
+    out OCR1AL,temp ; старший байт 
+    clr temp ;обнуление 
+    out TCNT1H,temp ; счётного 
+    out TCNT1L,temp ; регистра 
+    sei ;разрешение прерываний 
+WAITSTART: sbic PIND,START ;ожидание нажатия 
+    rjmp WAITSTART ; кнопки START 
+    ldi temp,0x0D ;запуск таймера с предделителем К=1024, 
+    out TCCR1B,temp ; при совпадении с OCR1A - сброс 
+LOOP: nop ;во время цикла происходит 
+    rjmp LOOP ; увеличение содержимого счётного регистра 
+;***Обработка прерывания от кнопки STOP 
+STOP_PRESSED: clr temp ;останов 
+    out TCCR1B,temp ; таймера 
+WAITSTART_2: ;ожидание 
+    sbic PIND,START ; нажатия 
+    rjmp WAITSTART_2 ; кнопки START 
+    ldi temp,0x0D ;запуск 
+    out TCCR1B,temp ; таймера с предделителем К=1024 
+    reti

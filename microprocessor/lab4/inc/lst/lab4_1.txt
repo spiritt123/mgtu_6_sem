@@ -1,0 +1,85 @@
+;Программа 4.1 для МК ATx8515:
+;демонстрация работы таймера Т0 в режиме счётчика событий;
+;событие - нажатие кнопки SW0.
+;Соединения: порт PB0–SW0, шлейфом порт PD-LED
+;Светодиоды включаются после четвертого нажатия кнопки SW0
+;*****************************************************************
+
+.include "m8515def.inc" ;файл определений ATmega8515
+.def temp = r16 ;временный регистр
+;***Таблица векторов прерываний
+.org $000
+	rjmp INIT ;обработка сброса
+.org $007
+	rjmp T0_OVF ;обработка переполнения таймера T0
+;***Инициализация МК
+INIT:
+	ldi temp,low(RAMEND) ;установка
+	out SPL,temp ; указателя стека
+	ldi temp,high(RAMEND) ; на последнюю
+	out SPH,temp ;ячейку ОЗУ
+	ldi temp,0x01 ;инициализация вывода порта PB0
+	out DDRB,temp ; на выход, а РВ7 на вход
+	ldi temp,0x80 ;включение ‘подтягивающего’ резистора
+	out PORTB,temp ; входа PB7
+	ser temp ;инициализация выводов порта PD
+	out DDRD,temp ; на вывод
+	out PORTD,temp ;выключение светодиодов
+	ldi temp,(1<<SE) ;разрешение перехода
+	out MCUCR,temp ; в режим Idle
+;***Настройка таймера Т0 на режим счётчика событий
+	ldi temp,0x02 ;разрешение прерывания по
+	out TIMSK,temp ; переполнению таймера Т0
+	ldi temp,0x07 ;переключение таймера
+	out TCCR0,temp ; по положительному перепаду напряжения
+	sei ;глобальное разрешение прерываний
+	ldi temp,0xFC ;$FC=-4 для
+	out TCNT0,temp ; отсчёта 4-х нажатий
+LOOP:
+	sbic PINB, 7
+	rjmp CHK_DOWN
+	cbi PORTB, 0
+	sbi PORTB, 0
+	cbi PORTB, 0
+WAIT_BTN_UP:
+	sbis PINB, 7
+	rjmp WAIT_BTN_UP
+	rcall DELAY_HALF_SECOND
+
+CHK_DOWN:
+	rjmp LOOP
+;***Обработка прерывания при переполнении таймера T0
+T0_OVF:
+	clr temp
+	out PORTD,temp ;включение светодиодов
+	rcall DELAY ;задержка
+	ser temp
+	out PORTD,temp ;выключение светодиодов
+	ldi temp,0xFC ;перезагрузка
+	out TCNT0,temp ; TCNT0
+	reti
+;*** Задержка ***
+DELAY:
+	ldi r19,6
+	ldi r20,255
+	ldi r21,255
+dd:
+	dec r21
+	brne dd
+	dec r20
+	brne dd
+	dec r19
+	brne dd
+	ret
+DELAY_HALF_SECOND:
+	ldi r19, 3
+	ldi r20, 255
+	ldi r21, 255
+dd2:
+	dec r21
+	brne dd2
+	dec r20
+	brne dd2
+	dec r19
+	brne dd2
+	ret
