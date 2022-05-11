@@ -1,0 +1,109 @@
+% === Исходные данные ===
+a = [2;-1;1;1;0;1];
+b = [104;98;88;-141;81;73;67];
+c = [1;0;-1;1;1;1];
+d = [22;20;19;-26;16;15;13];
+A = diag(a, -1) + diag(b, 0) + diag(c, 1);
+
+% === Проверка условий применимости метода ===
+function Check(a, b, c)
+    res = 'TRUE';
+    for i=1 : 6
+        if abs(c(i)) < abs(a(i)) + abs(b(i))
+            res = 'FALSE';
+        end
+    end
+    disp(res);
+end
+
+disp(A);
+N = size(A, 1);
+
+% === Вычисления ===
+a = [0; a]; % Добавляем элемент в начало вектора a
+c = [c; 0]; % Добавляем элемент в конец вектора с
+
+% Прямая прогонка
+alpha = zeros(N, 1); % Инициализация нулями
+beta = zeros(N, 1);
+y = zeros(N, 1);
+y(1) = b(1);
+alpha(1) = -c(1) / y(1);
+beta(1) = d(1) / y(1);
+
+for i = 2:N
+    y(i) = b(i) + a(i) * alpha(i - 1);
+    alpha(i) = -c(i) / y(i);
+    beta(i) = (d(i) - a(i) * beta(i - 1)) / y(i);
+end
+
+disp('Выполнение достаточных условий');
+Check(alpha,beta,y);
+
+% Обратная прогонка
+x = zeros(N, 1);
+x(N) = beta(N);
+
+for i = 1:N-1
+    x(N-i) = alpha(N-i) * x(N-i + 1) + beta(N-i);
+end
+
+% Вывод значений
+disp('Альфа');
+fprintf(' %f ',alpha);
+fprintf('\n');
+
+disp('Бета');
+fprintf(' %f ',beta);
+fprintf('\n');
+
+disp('Х');
+disp(x);
+r=d-A*x;
+
+disp('Невязка');
+disp(r);
+
+norm_1 = norm(r, 1) ;
+disp('Единичная норма невязки:');
+disp(norm_1)
+
+norm_inf = norm(r, inf);
+disp('Бесконечная норма невязки:');
+disp(norm_inf)
+
+% === Проверка устойчивости решения ===
+disp('===============================')
+d1=d+0.01;
+
+% Прямая прогонка
+alpha = zeros(N, 1); % Инициализация нулями
+beta = zeros(N, 1);
+y = zeros(N, 1);
+y(1) = b(1);
+alpha(1) = -c(1) / y(1);
+beta(1) = d1(1) / y(1);
+
+for i = 2:N
+    y(i) = b(i) + a(i) * alpha(i - 1);
+    alpha(i) = -c(i) / y(i);
+    beta(i) = (d(i) - a(i) * beta(i - 1)) / y(i);
+end
+
+x = zeros(N, 1);
+x(N) = beta(N);
+
+for i = 1:N-1
+    x(N-i) = alpha(N-i) * x(N-i + 1) + beta(N-i);
+end
+
+%Вывод значений
+disp('Устойчивость к малым возмущениям');
+disp('Альфа');
+fprintf(' %f ',alpha);
+fprintf('\n');
+disp('Бета');
+fprintf(' %f ',beta);
+fprintf('\n');
+disp('Х');
+disp(x);

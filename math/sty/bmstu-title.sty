@@ -1,0 +1,270 @@
+%% bmstu_title.sty
+%% Copyright 2022 Mikael Novikov
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Mikael Novikov.
+%
+% This work consists of all files listed in manifest.txt.
+
+% Установка мета-данных выходного файла
+\newcommand{\documentmeta}[4]
+{
+	\hypersetup{
+		pdftitle={#1 #2 #3},
+		pdfsubject={#4},
+		pdfauthor={#2}
+	}
+}
+
+% Cоздание полей
+\RequirePackage[normalem]{ulem}
+\RequirePackage{stackengine}
+\newcommand{\longunderline}[1]
+{
+	\uline{#1\hfill\mbox{}}
+}
+\newcommand{\fixunderline}[3]
+{
+	$\underset{\text{#3}}{\text{\uline{\stackengine{0pt}{\hspace{#2}}{\text{#1}}{O}{c}{F}{F}{L}}}}$
+}
+
+% Создание горизонтальной линии
+\makeatletter
+\newcommand{\vhrulefill}[1]
+{
+	\leavevmode\leaders\hrule\@height#1\hfill \kern\z@
+}
+\makeatother
+
+% Создание шапки титульной страницы
+\newcommand{\titlepageheader}[3]
+{
+	\begin{wrapfigure}[7]{l}{0.14\linewidth}
+		\vspace{2.4mm}
+		\hspace{-8mm}
+		\includegraphics[width=0.89\linewidth]{inc/img/bmstu-logo}
+	\end{wrapfigure}
+	
+	{
+		\singlespacing \small
+        \fontsize{12pt}{0.3\baselineskip}\selectfont
+        Министерство науки и высшего образования Российской Федерации \\
+        Федеральное государственное бюджетное образовательное учреждение \\ 
+        высшего образования \\ 
+        <<Московский государственный технический университет \\ 
+        имени Н.Э. Баумана \\ 
+        (национальный исследовательский университет)>> \\ 
+        (МГТУ им. Н.Э. Баумана)
+	}
+	
+	\hspace{0mm}
+	%\vspace{-7.2mm}
+	\vhrulefill{0.9mm} \\
+	\vspace{-7mm} 
+	\hspace{0mm}
+	\vhrulefill{0.2mm} \\
+	\vspace{2.8mm}
+	
+	{
+		\small
+	    \hspace{0mm}
+		ФАКУЛЬТЕТ \longunderline{<<#1>>} \\
+		\vspace{3.3mm}
+	    \hspace{0mm}
+		КАФЕДРА \longunderline{<<#2>>} \\
+		\vspace{3.3mm}
+	    \hspace{0mm}
+		НАПРАВЛЕНИЕ ПОДГОТОВКИ \longunderline{<<#3>>} \\
+	}
+}
+
+% Установка заголовков отчета по НИР
+\newcommand{\titlepageresearchtitle}[1]
+{
+	{
+		\LARGE \bfseries
+		ОТЧЕТ \\
+	}
+	\vspace{5mm}
+	{
+		\Large \itshape
+		ПО НАУЧНО-ИССЛЕДОВАТЕЛЬСКОЙ РАБОТЕ \\
+		\vspace{5mm}
+		НА ТЕМУ: \\
+		<<#1>> \\
+	}
+}
+
+% Установка заголовков РПЗ
+\newcommand{\titlepagenotetitle}[2]
+{
+	{
+		\LARGE \bfseries
+		РАСЧЕТНО-ПОЯСНИТЕЛЬНАЯ ЗАПИСКА \\
+	}
+	\vspace{5mm}
+	{
+		\Large \itshape
+		#1 \\
+		\vspace{5mm}
+		НА ТЕМУ: \\
+		<<#2>> \\
+	}
+}
+
+% Установка заголовков отчета
+\newcommand{\titlepagereporttitle}[4]
+{
+    \hspace{0mm}
+	\textbf{ОТЧЕТ} \\
+    \hspace{0mm}
+    \textbf{по #1} \\
+    \begin{flushleft}
+    \ifthenelse{\isempty{#2}}{}{\hspace{0mm}\textbf{Название: }<<#2>> \\}
+    \ifthenelse{\isempty{#3}}{}{\hspace{0mm}\textbf{Дисциплина: }<<#3>> \\}
+    \ifthenelse{\isempty{#4}}{}{\hspace{0mm}\textbf{Вариант №~#4 }\\}
+    \end{flushleft}
+}
+
+% Создание поля студента
+\newcommand{\titlepagestudent}[2]
+{
+	Студент \fixunderline{#1}{25mm}{(Группа)} &
+	\fixunderline{}{40mm}{(Подпись, дата)} \vspace{1.3mm} &
+	\fixunderline{#2}{40mm}{(И.~О.~Фамилия)} \\
+}
+
+% Создание прочих полей
+\newcommand{\titlepageothers}[2]
+{
+	#1 &
+	\fixunderline{}{40mm}{(Подпись, дата)} \vspace{1.3mm} &
+	\fixunderline{#2}{40mm}{(И.~О.~Фамилия)} \\
+}
+
+% Установка исполнителей работы
+\newcommand{\titlepageauthors}[7]
+{
+	{
+		\small
+		\begin{tabularx}{\textwidth}{@{}>{\hsize=.5\hsize}X>{\hsize=.25\hsize}X>{\hsize=.25\hsize}X@{}}
+			\titlepagestudent{#1}{#2}
+			\titlepageothers{#3}{#4}
+			\ifthenelse{\isempty{#5}}{}{\titlepageothers{Консультант}{#5}}
+			\ifthenelse{\isempty{#6}}{}{\titlepageothers{Консультант}{#6}}
+			\ifthenelse{\isempty{#7}}{}{\titlepageothers{Нормоконтролер}{#7}}
+		\end{tabularx}
+	}
+}
+
+\newcommand{\makethesissubtitle}[7]
+{
+    \titlepageauthors{#1}{#2}{#3}{#4}{#5}{#6}{#7}
+}
+
+% Создание титульной страницы РПЗ к ВКР
+\newcommand{\makethesistitle}[7]
+{
+	\documentmeta{РПЗ к ВКР}{#6}{#5}{#4}
+	
+	\begin{titlepage}
+		\centering
+		
+		\titlepageheader{#1}{#2}{#3}
+		\vspace{15.8mm}
+		
+		\titlepagenotetitle{К ВЫПУСКНОЙ КВАЛИФИКАЦИОННОЙ РАБОТЕ}{#4}
+		\vfill
+		
+        \titlepageauthors{#5}{#6}{Руководитель ВКР}#7 %{#7}{#8}{#9}{}%{#10}
+		\vspace{12mm}
+		
+		\textit{{\the\year} г.}
+	\end{titlepage}
+	
+	\setcounter{page}{2}
+}
+
+% Создание титульной страницы отчета по НИР
+\newcommand{\makeresearchtitle}[9]
+{
+	\documentmeta{Отчет по НИР}{#6}{#5}{#4}
+	
+	\begin{titlepage}
+		\centering
+		
+		\titlepageheader{#1}{#2}{#3}
+		\vspace{15.8mm}
+		
+		\titlepageresearchtitle{#4}
+		\vfill
+		
+		\titlepageauthors{#5}{#6}{Руководитель НИР}{#7}{#8}{#9}{}
+		\vspace{14mm}
+		
+		\textit{{\the\year} г.}
+	\end{titlepage}
+	
+	\setcounter{page}{2}
+}
+
+% Создание титульной страницы РПЗ к КР
+\newcommand{\makecourseworktitle}[9]
+{
+	\documentmeta{РПЗ к КР}{#6}{#5}{#4}
+	
+	\begin{titlepage}
+		\centering
+		
+		\titlepageheader{#1}{#2}{#3}
+		\vspace{15.8mm}
+		
+		\titlepagenotetitle{К КУРСОВОЙ РАБОТЕ}{#4}
+		\vfill
+		
+		\titlepageauthors{#5}{#6}{Руководитель курсовой работы}{#7}{#8}{#9}{}
+		\vspace{14mm}
+		
+		\textit{{\the\year} г.}
+	\end{titlepage}
+	
+	\setcounter{page}{2}
+}
+
+% Создание титульной страницы отчета
+\newcommand{\makesubreporttitle}[3]
+{
+    \titlepageauthors{#1}{#2}{Преподаватель}{#3}{}{}{}
+}
+
+\newcommand{\makereporttitle}[9]
+{
+	\documentmeta{Отчет}{#9}{#4 #5}{#6}
+	
+	\begin{titlepage}
+		\centering
+		
+        \titlepageheader{#1}{#2}{#3}
+		\vspace{15.8mm}
+		
+		\titlepagereporttitle{#4}{#5}{#6}{#7}
+		\vfill
+		
+%        \titlepageauthors{#8}{#9}{Преподаватель}{#9}{}{}{}
+        \makesubreporttitle#9
+        \vspace{14mm}
+		
+		\textit{{\the\year} г.}
+	\end{titlepage}
+
+	\setcounter{page}{2}
+}

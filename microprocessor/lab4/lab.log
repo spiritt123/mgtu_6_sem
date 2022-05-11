@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.4)  11 MAY 2022 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.4)  15 APR 2022 12:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1517,47 +1517,58 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@ppsavesec=\count506
 \c@@ppsaveapp=\count507
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
-\multirow@colwidth=\skip89
-\multirow@cntb=\count508
-\multirow@dima=\skip90
-\bigstrutjot=\dimen329
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
-\tikzscale@accuracy=\skip91
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count508
+\l_MT_multwidth_dim=\dimen329
+\origjot=\skip89
+\l_MT_shortvdotswithinadjustabove_dim=\dimen330
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen331
+\l_MT_above_intertext_sep=\dimen332
+\l_MT_below_intertext_sep=\dimen333
+\l_MT_above_shortintertext_sep=\dimen334
+\l_MT_below_shortintertext_sep=\dimen335
+\xmathstrut@box=\box81
+\xmathstrut@dim=\dimen336
+)
+\tikzscale@accuracy=\skip90
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'russian'.
- (./lab.aux
 
-LaTeX Warning: Label `table:mul_table' multiply defined.
-
-)
+No file lab.aux.
 \openout1 = `lab.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Info: Redefining \th on input line 5.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Info: Redefining \th on input line 4.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1592,14 +1603,14 @@ LaTeX Info: Redefining \th on input line 5.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 5.
+LaTeX Info: Redefining \microtypecontext on input line 4.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 5.
+LaTeX Info: Redefining \showhyphens on input line 4.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1610,13 +1621,13 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count509
-\scratchdimen=\dimen330
-\scratchbox=\box81
+\scratchdimen=\dimen337
+\scratchbox=\box82
 \nofMPsegments=\count510
 \nofMParguments=\count511
 \everyMPshowfont=\toks54
 \MPscratchCnt=\count512
-\MPscratchDim=\dimen331
+\MPscratchDim=\dimen338
 \MPnumerator=\count513
 \makeMPintoPDFobject=\count514
 \everyMPtoPDFconversion=\toks55
@@ -1688,9 +1699,9 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'lab.bbl' not found.
 
 No file lab.bbl.
-Package biblatex Info: Reference section=0 on input line 5.
-Package biblatex Info: Reference segment=0 on input line 5.
-Package hyperref Info: Link coloring OFF on input line 5.
+Package biblatex Info: Reference section=0 on input line 4.
+Package biblatex Info: Reference segment=0 on input line 4.
+Package hyperref Info: Link coloring OFF on input line 4.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -1702,28 +1713,26 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count516
 )
-LaTeX Info: Redefining \ref on input line 5.
-LaTeX Info: Redefining \pageref on input line 5.
-LaTeX Info: Redefining \nameref on input line 5.
-
-(./lab.out) (./lab.out)
+LaTeX Info: Redefining \ref on input line 4.
+LaTeX Info: Redefining \pageref on input line 4.
+LaTeX Info: Redefining \nameref on input line 4.
 \@outlinefile=\write5
 \openout5 = `lab.out'.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 5.
-<inc/img/bmstu-logo.pdf, id=43, 500.95255pt x 591.38255pt>
+(lastpage)             ! on input line 4.
+<inc/img/bmstu-logo.pdf, id=7, 500.95255pt x 591.38255pt>
 File: inc/img/bmstu-logo.pdf Graphic file (type pdf)
 <use inc/img/bmstu-logo.pdf>
-Package pdftex.def Info: inc/img/bmstu-logo.pdf  used on input line 34.
+Package pdftex.def Info: inc/img/bmstu-logo.pdf  used on input line 36.
 (pdftex.def)             Requested size: 62.35997pt x 73.61583pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-Underfull \hbox (badness 10000) in alignment at lines 34--34
+Underfull \hbox (badness 10000) in alignment at lines 36--36
 [][][] 
  []
 
@@ -1734,39 +1743,19 @@ Underfull \hbox (badness 10000) in alignment at lines 34--34
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
 
 LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 36.
+(Font)              size <17.28> substituted on input line 38.
 
 
 LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 36.
+(Font)              size <17.28> substituted on input line 38.
 
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
 
-Overfull \hbox (15.19418pt too wide) in paragraph at lines 54--64
-[][] 
- []
+LaTeX Warning: Reference `lst:lab4_1.txt' on page 2 undefined on input line 63.
 
-[2]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
-<inc/img/alg_scheme_1.png, id=70, 208.78pt x 338.76563pt>
-File: inc/img/alg_scheme_1.png Graphic file (type png)
-<use inc/img/alg_scheme_1.png>
-Package pdftex.def Info: inc/img/alg_scheme_1.png  used on input line 78.
-(pdftex.def)             Requested size: 150.14671pt x 243.64226pt.
-<inc/img/alg_scheme_2.png, id=72, 419.31656pt x 563.85657pt>
-File: inc/img/alg_scheme_2.png Graphic file (type png)
-<use inc/img/alg_scheme_2.png>
-Package pdftex.def Info: inc/img/alg_scheme_2.png  used on input line 85.
-(pdftex.def)             Requested size: 200.19054pt x 269.19405pt.
-<inc/img/alg_scheme_3.png, id=73, 618.31pt x 663.47874pt>
-File: inc/img/alg_scheme_3.png Graphic file (type png)
-<use inc/img/alg_scheme_3.png>
-Package pdftex.def Info: inc/img/alg_scheme_3.png  used on input line 92.
-(pdftex.def)             Requested size: 350.33727pt x 375.93932pt.
-[3 <./inc/img/alg_scheme_1.png> <./inc/img/alg_scheme_2.png>]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
+
 LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-98.
+67.
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
@@ -1774,7 +1763,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T2A).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package csquotes Info: Input encoding change on input line 98.
+Package csquotes Info: Input encoding change on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
 File: koi8-r.def 2014/10/28 v1.0d Input encoding file
@@ -1784,67 +1773,182 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 )
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-koi8-r.def
 File: se-koi8-r.def 2019/11/29 v1.12 stringenc: KOI8-R
+) [2]
+[3]
+
+LaTeX Warning: Reference `img:struct_scheme_of_timer.png' on page 4 undefined o
+n input line 69.
+
+
+LaTeX Warning: Reference `img:struct_scheme_of_timer_t1.png' on page 4 undefine
+d on input line 69.
+
+[4]
+<inc/img/struct_scheme_of_timer.png, id=126, 414.04688pt x 280.04625pt>
+File: inc/img/struct_scheme_of_timer.png Graphic file (type png)
+<use inc/img/struct_scheme_of_timer.png>
+Package pdftex.def Info: inc/img/struct_scheme_of_timer.png  used on input line
+ 76.
+(pdftex.def)             Requested size: 350.33727pt x 236.96358pt.
+<inc/img/struct_scheme_of_timer_t1.png, id=128, 432.86719pt x 392.96812pt>
+File: inc/img/struct_scheme_of_timer_t1.png Graphic file (type png)
+<use inc/img/struct_scheme_of_timer_t1.png>
+Package pdftex.def Info: inc/img/struct_scheme_of_timer_t1.png  used on input l
+ine 83.
+(pdftex.def)             Requested size: 350.33727pt x 318.05658pt.
+
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
+[5 <./inc/img/struct_scheme_of_timer.png> <./inc/img/struct_scheme_of_timer_t1.
+png>]
+
+LaTeX Warning: Command \cyrg invalid in math mode on input line 91.
+
+
+LaTeX Warning: Command \cyrd invalid in math mode on input line 91.
+
+
+LaTeX Warning: Command \cyre invalid in math mode on input line 91.
+
+
+LaTeX Warning: Command \CYRM invalid in math mode on input line 91.
+
+
+LaTeX Warning: Command \CYRG invalid in math mode on input line 91.
+
+
+LaTeX Warning: Command \cyrc invalid in math mode on input line 91.
+
+Missing character: There is no г in font cmr12!
+Missing character: There is no д in font cmr12!
+Missing character: There is no е in font cmr12!
+Missing character: There is no М in font cmr12!
+Missing character: There is no Г in font cmr12!
+Missing character: There is no ц in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+[]$\OML/cmm/m/it/14.4 T \OT1/cmr/m/n/14.4 (+20) = (65536 \OMS/cmsy/m/n/14.4 ^^@
+ \OML/cmm/m/it/14.4 TCNT\OT1/cmr/m/n/14.4 (+20) 1) \OMS/cmsy/m/n/14.4 ^^C \OML/
+cmm/m/it/14.4 K=F[]; F[] \OT1/cmr/m/n/14.4 (+20) = 3\OML/cmm/m/it/14.4 :\OT1/cm
+r/m/n/14.4 (+20) 69\OML/cmm/m/it/14.4 ; K \OT1/cmr/m/n/14.4 (+20) =
+ []
+
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 96.
+
+Missing character: There is no с in font cmr12!
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 97.
+
+Missing character: There is no с in font cmr12!
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 116.
+
+Missing character: There is no с in font cmr12!
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 117.
+
+Missing character: There is no с in font cmr12!
+Package csquotes Info: Input encoding change on input line 136.
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2014/10/28 v1.0d Input encoding file
 )
-Overfull \hbox (32.91103pt too wide) in paragraph at lines 1--2
+Overfull \hbox (25.50276pt too wide) in paragraph at lines 1--2
 [][][][]  
  []
 
-
-Overfull \hbox (32.91103pt too wide) in paragraph at lines 7--8
+[6]
+Overfull \hbox (25.50276pt too wide) in paragraph at lines 7--8
 [][][][]  
  []
 
-[4 <./inc/img/alg_scheme_3.png>] [5] [6] [7] [8]
+[7]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
+[8]
+
+LaTeX Warning: Command \cyri invalid in math mode on input line 157.
+
+Missing character: There is no и in font cmr10!
+
+LaTeX Warning: Command \cyrz invalid in math mode on input line 159.
+
+
+LaTeX Warning: Command \CYRA invalid in math mode on input line 159.
+
+
+LaTeX Warning: Command \CYRA invalid in math mode on input line 159.
+
+Missing character: There is no з in font cmr10!
+Missing character: There is no А in font cmr12!
+Missing character: There is no А in font cmr12!
+
+LaTeX Warning: Command \cyrz invalid in math mode on input line 161.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 161.
+
+
+LaTeX Warning: Command \cyrk invalid in math mode on input line 161.
+
+
+LaTeX Warning: Command \CYRA invalid in math mode on input line 161.
+
+
+LaTeX Warning: Command \CYRA invalid in math mode on input line 161.
+
+Missing character: There is no з in font cmr12!
+Missing character: There is no к in font cmr10!
+Missing character: There is no А in font cmr12!
+Missing character: There is no А in font cmr12!
+Package csquotes Info: Input encoding change on input line 165.
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2014/10/28 v1.0d Input encoding file
+) [9]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 5.
 
-LaTeX Warning: Command \CYRA invalid in math mode on input line 127.
-
-
-LaTeX Warning: Command \CYRV invalid in math mode on input line 127.
-
-Missing character: There is no А in font cmr12!
-Missing character: There is no В in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 174--180
 
  []
 
+[10]
+
+LaTeX Warning: Reference `img:4.png' on page 11 undefined on input line 181.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--186
+
+ []
+
+
+LaTeX Warning: Reference `img:4.png' on page 11 undefined on input line 187.
+
+Package csquotes Info: Input encoding change on input line 191.
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2014/10/28 v1.0d Input encoding file
+)
+Overfull \hbox (1.05318pt too wide) in paragraph at lines 7--8
+[][][] 
+ []
+
+[11]
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 6.
-
-Overfull \hbox (9.07153pt too wide) in paragraph at lines 136--156
-[][] 
+[12]
+Package csquotes Info: Input encoding change on input line 200.
+ (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2014/10/28 v1.0d Input encoding file
+)
+Overfull \hbox (40.31929pt too wide) in paragraph at lines 1--2
+[][][][][] 
  []
 
-[9]
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
+
+ []
+
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 7.
-<inc/img/lab3_mul_scheme.png, id=282, 382.42876pt x 550.055pt>
-File: inc/img/lab3_mul_scheme.png Graphic file (type png)
-<use inc/img/lab3_mul_scheme.png>
-Package pdftex.def Info: inc/img/lab3_mul_scheme.png  used on input line 172.
-(pdftex.def)             Requested size: 150.14671pt x 215.95581pt.
-[10 <./inc/img/lab3_mul_scheme.png (PNG copy)>] [11]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 8.
-<inc/img/lab3_div.png, id=299, 418.56375pt x 575.14874pt>
-File: inc/img/lab3_div.png Graphic file (type png)
-<use inc/img/lab3_div.png>
-Package pdftex.def Info: inc/img/lab3_div.png  used on input line 276.
-(pdftex.def)             Requested size: 400.38872pt x 550.17068pt.
-[12] [13 <./inc/img/lab3_div.png (PNG copy)>]
-Overfull \vbox (9.34044pt too high) has occurred while \output is active []
 
+Package lastpage Warning: Rerun to get the references right on input line 252.
 
-[14]
-Underfull \hbox (badness 1117) in paragraph at lines 349--354
-[]\T2A/cmr/m/n/14.4 (+20) В тре-тьей стро-ке таб-ли-цы []8.1[] по-до-бран при-м
-ер с мак-си-маль-ны-ми
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--354
-
- []
-
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 9.
 
 AED: lastpage setting LastPage
 [15] (./lab.aux)
@@ -1853,36 +1957,52 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `lab.out' has not changed.
-(rerunfilecheck)             Checksum: 468258702E2135D66F96BAE6AEDDBC59;1277.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `lab.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `lab.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  549BDC1A8B22CD921D263F8D29699E58;809.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                lab
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'lab.run.xml'.
 \openout1 = `lab.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48012 strings out of 479304
- 1019650 string characters out of 5869780
- 2260565 words of memory out of 5000000
- 64064 multiletter control sequences out of 15000+600000
- 424218 words of font info for 129 fonts, out of 8000000 for 9000
+ 48561 strings out of 479304
+ 1029954 string characters out of 5869780
+ 2228224 words of memory out of 5000000
+ 64466 multiletter control sequences out of 15000+600000
+ 423658 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,19n,130p,1148b,3053s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1440.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on lab.pdf (15 pages, 734876 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfti1440.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sftt1200.pfb>
+Output written on lab.pdf (15 pages, 474883 bytes).
 PDF statistics:
- 409 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 211 named destinations out of 1000 (max. 500000)
- 35443 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 568 PDF objects out of 1000 (max. 8388607)
+ 527 compressed objects within 6 object streams
+ 368 named destinations out of 1000 (max. 500000)
+ 35356 words of extra memory for PDF output out of 35830 (max. 10000000)
 

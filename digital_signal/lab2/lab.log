@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.4)  11 MAR 2022 13:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.4)  15 APR 2022 13:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1522,8 +1522,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'russian'.
-
-No file lab.aux.
+ (./lab.aux)
 \openout1 = `lab.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1547,6 +1546,7 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Info: Redefining \th on input line 3.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1694,6 +1694,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
+
+(./lab.out) (./lab.out)
 \@outlinefile=\write5
 \openout5 = `lab.out'.
 
@@ -1718,7 +1720,6 @@ Underfull \hbox (badness 10000) in alignment at lines 24--24
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./inc/img/bmstu-logo.pdf>]
 
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
 
 LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 26.
@@ -1728,58 +1729,118 @@ LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 26.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 30.
+Overfull \hbox (862.56729pt too wide) in paragraph at lines 35--36
+[][] 
+ []
 
+[2]
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
+59.
+ (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T2A).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package csquotes Info: Input encoding change on input line 59.
+
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/koi8-r.def
+File: koi8-r.def 2014/10/28 v1.0d Input encoding file
+)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-utf8.def
+File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
+)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-koi8-r.def
+File: se-koi8-r.def 2019/11/29 v1.12 stringenc: KOI8-R
+) [3]
+[4]
+<inc/img/Figure_1.png, id=119, 462.528pt x 211.7511pt>
+File: inc/img/Figure_1.png Graphic file (type png)
+<use inc/img/Figure_1.png>
+Package pdftex.def Info: inc/img/Figure_1.png  used on input line 66.
+(pdftex.def)             Requested size: 400.38872pt x 183.31079pt.
+ [5]
+<inc/img/Figure_2.png, id=155, 462.528pt x 211.7511pt>
+File: inc/img/Figure_2.png Graphic file (type png)
+<use inc/img/Figure_2.png>
+Package pdftex.def Info: inc/img/Figure_2.png  used on input line 73.
+(pdftex.def)             Requested size: 400.38872pt x 183.31079pt.
+<inc/img/Figure_3.png, id=156, 462.528pt x 346.896pt>
+File: inc/img/Figure_3.png Graphic file (type png)
+<use inc/img/Figure_3.png>
+Package pdftex.def Info: inc/img/Figure_3.png  used on input line 80.
+(pdftex.def)             Requested size: 400.38872pt x 300.30438pt.
+ [6 <./inc/img/Figure_1.png> <./inc/img/Figure_2.png>]
+<inc/img/Figure_4.png, id=165, 462.528pt x 346.896pt>
+File: inc/img/Figure_4.png Graphic file (type png)
+<use inc/img/Figure_4.png>
+Package pdftex.def Info: inc/img/Figure_4.png  used on input line 87.
+(pdftex.def)             Requested size: 400.38872pt x 300.30438pt.
+<inc/img/Figure_5.png, id=166, 462.528pt x 346.896pt>
+File: inc/img/Figure_5.png Graphic file (type png)
+<use inc/img/Figure_5.png>
+Package pdftex.def Info: inc/img/Figure_5.png  used on input line 94.
+(pdftex.def)             Requested size: 400.38872pt x 300.30438pt.
+ [7 <./inc/img/Figure_3.png> <./inc/img/Figure_4.png>]
+<inc/img/Figure_6.png, id=176, 462.528pt x 346.896pt>
+File: inc/img/Figure_6.png Graphic file (type png)
+<use inc/img/Figure_6.png>
+Package pdftex.def Info: inc/img/Figure_6.png  used on input line 101.
+(pdftex.def)             Requested size: 500.484pt x 375.38313pt.
+ [8 <./inc/img/Figure_5.png>]
+<inc/img/Figure_7.png, id=183, 462.528pt x 346.896pt>
+File: inc/img/Figure_7.png Graphic file (type png)
+<use inc/img/Figure_7.png>
+Package pdftex.def Info: inc/img/Figure_7.png  used on input line 108.
+(pdftex.def)             Requested size: 400.38872pt x 300.30438pt.
+ [9 <./inc/img/Figure_6.png>]
+<inc/img/Figure_8.png, id=190, 462.528pt x 346.896pt>
+File: inc/img/Figure_8.png Graphic file (type png)
+<use inc/img/Figure_8.png>
+Package pdftex.def Info: inc/img/Figure_8.png  used on input line 115.
+(pdftex.def)             Requested size: 400.38872pt x 300.30438pt.
+<inc/img/Figure_9.png, id=191, 462.528pt x 346.896pt>
+File: inc/img/Figure_9.png Graphic file (type png)
+<use inc/img/Figure_9.png>
+Package pdftex.def Info: inc/img/Figure_9.png  used on input line 122.
+(pdftex.def)             Requested size: 400.38872pt x 300.30438pt.
+ [10 <./inc/img/Figure_7.png> <./inc/img/Figure_8.png>]
 
 AED: lastpage setting LastPage
-[2
-
-] (./lab.aux)
+[11 <./inc/img/Figure_9.png>] (./lab.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `lab.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `lab.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3AA9E1BEE89924134FD723AC339F7077;81.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                lab
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `lab.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'lab.run.xml'.
 \openout1 = `lab.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46999 strings out of 479304
- 1005958 string characters out of 5869780
- 2083536 words of memory out of 5000000
- 63361 multiletter control sequences out of 15000+600000
- 417546 words of font info for 80 fonts, out of 8000000 for 9000
+ 47837 strings out of 479304
+ 1017111 string characters out of 5869780
+ 2174757 words of memory out of 5000000
+ 64008 multiletter control sequences out of 15000+600000
+ 421242 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,19n,130p,1148b,3053s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texmf
-/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/
-cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfti1440.pfb>
-Output written on lab.pdf (2 pages, 212393 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1440.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on lab.pdf (11 pages, 573815 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 24594 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 272 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 131 named destinations out of 1000 (max. 500000)
+ 31295 words of extra memory for PDF output out of 35830 (max. 10000000)
 
