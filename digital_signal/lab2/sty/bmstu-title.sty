@@ -67,22 +67,27 @@
 	}
 	
 	\hspace{0mm}
+    \hspace{-30mm}
 	%\vspace{-7.2mm}
 	\vhrulefill{0.9mm} \\
 	\vspace{-7mm} 
 	\hspace{0mm}
+    \hspace{-30mm}
 	\vhrulefill{0.2mm} \\
 	\vspace{2.8mm}
 	
 	{
 		\small
 	    \hspace{0mm}
+    \hspace{-30mm}
 		ФАКУЛЬТЕТ \longunderline{<<#1>>} \\
 		\vspace{3.3mm}
 	    \hspace{0mm}
+    \hspace{-30mm}
 		КАФЕДРА \longunderline{<<#2>>} \\
 		\vspace{3.3mm}
 	    \hspace{0mm}
+    \hspace{-30mm}
 		НАПРАВЛЕНИЕ ПОДГОТОВКИ \longunderline{<<#3>>} \\
 	}
 }
@@ -129,8 +134,11 @@
     \hspace{0mm}
     \textbf{по #1} \\
     \begin{flushleft}
+    \hspace{-30mm}
     \ifthenelse{\isempty{#2}}{}{\hspace{0mm}\textbf{Название: }<<#2>> \\}
+    \hspace{-30mm}
     \ifthenelse{\isempty{#3}}{}{\hspace{0mm}\textbf{Дисциплина: }<<#3>> \\}
+    \hspace{-30mm}
     \ifthenelse{\isempty{#4}}{}{\hspace{0mm}\textbf{Вариант №~#4 }\\}
     \end{flushleft}
 }
@@ -138,15 +146,18 @@
 % Создание поля студента
 \newcommand{\titlepagestudent}[2]
 {
-	Студент \fixunderline{#1}{25mm}{(Группа)} &
-	\fixunderline{}{40mm}{(Подпись, дата)} \vspace{1.3mm} &
+    Студент \fixunderline{#1}{25mm}{(Группа)} &
+
+	\fixunderline{\includegraphics[width=0.10\linewidth]{inc/img/lss}}
+                 {40mm}
+                 {(Подпись, дата)} \vspace{1.3mm} &
 	\fixunderline{#2}{40mm}{(И.~О.~Фамилия)} \\
 }
 
 % Создание прочих полей
 \newcommand{\titlepageothers}[2]
 {
-	#1 &
+    #1 &
 	\fixunderline{}{40mm}{(Подпись, дата)} \vspace{1.3mm} &
 	\fixunderline{#2}{40mm}{(И.~О.~Фамилия)} \\
 }
