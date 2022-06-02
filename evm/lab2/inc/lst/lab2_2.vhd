@@ -43,7 +43,7 @@ BEGIN
     SN(0) <= (DLY_OVF and S(1)) or (COUNT and not S(1) and S(0)) or (not COUNT and S(1) and S(0));
     SN(1) <= (not COUNT and S(0)) or (S(1) and S(0));
 -- Описание счетчика
-    COUNTER_inst: "PROCESS (CLK)
+    COUNTER_inst: PROCESS (CLK)
     BEGIN
         IF (CLK='1' and CLK'event) THEN
             IF (RST='1' or DLY_EN = ‘0’) THEN
@@ -53,5 +53,5 @@ BEGIN
             END IF;
         END IF;
     END PROCESS;
-    DLY_OVF <= '1' WHEN COUNTER = 2**7-1 ELSE '0'; --Длительность задержки
+    DLY_OVF <= '1' WHEN COUNTER = 2**20-1 ELSE '0'; --Длительность задержки
 END Behavioral;
